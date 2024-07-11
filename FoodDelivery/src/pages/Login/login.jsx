@@ -1,11 +1,14 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import styles from './login.module.css'; // Import the CSS module
-import { UserContext } from '../UserContext';
-const Login = () => {
-  
-  const [password, setPassword] = useState('sdgd');
+import { UserContext } from '../../Components/UserContext';
+import { useNavigate } from "react-router-dom";
+const Login = ({isLoggedIn}) => {
+  let password= '';
+  const setPassword=(np)=>{
+    password=np;
+  }
   const {setUsername}=useContext(UserContext)
-  const [isLoggedIn, setLoggedIn]=useState(false)
+  const navigate=useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     setUsername(e.target.elements.username.value)
@@ -13,14 +16,17 @@ const Login = () => {
     console.log("Pass:"+password)
     // LOGIC HERE
     // LOGIC HERE
-    setLoggedIn(true)
+    navigate("/home")
     // LOGIC HERE
     // LOGIC HERE
-    if(isLoggedIn){
-        
-    }
+   
   };
-
+  useEffect(()=>{
+    if(isLoggedIn){
+      console.log("useeffect is true")
+      navigate("/home");
+    }
+  },[])
   return (
     <div className={styles.loginContainer}>
       <form onSubmit={handleSubmit} className={styles.loginForm}>
@@ -39,7 +45,6 @@ const Login = () => {
           <input
             type="password"
             id="password"
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
             className={styles.input}
           />

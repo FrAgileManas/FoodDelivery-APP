@@ -1,7 +1,4 @@
-*{
-    /* border: solid red 1px; */
-    margin: 0%;
-  }
+
   .header{
     /* background-color: rgb(44, 44, 44); */
     display: flex;
@@ -15,15 +12,16 @@
   
   .cart{position: static;}
   .count{
-    color: black;
+    color: rgb(255, 255, 255);
+    
     position:relative;
-    top: -13px;
+    top: -10px;
     right: 10px;
     border-radius: 50%;
     background-color: rgb(77, 42, 230);
     display: inline-block;
-    width: 1.1em;
-    height: .9em;
+    width: 1.5em;
+    height: 1.5em;
     font-size: .7em;
     text-align: center;
     padding: .03em .07em 0.3em .07em;

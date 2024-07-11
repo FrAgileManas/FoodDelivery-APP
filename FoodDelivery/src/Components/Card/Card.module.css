@@ -1,0 +1,75 @@
+/* Card.module.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    
+    padding: 1%;
+  }
+.card:hover{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+  .card img {
+    width: 100%;
+   
+  }
+  
+  .cardBody {
+    /* padding: 16px; */
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .promotedBadge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .cardDescription {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+  }
+  
+  .rating {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .price, .time {
+    font-size: 14px;
+  }
+  .hidden{
+    display: none;
+  }

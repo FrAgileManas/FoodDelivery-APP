@@ -1,0 +1,15 @@
+.places{
+    border: solid 1px red;
+    padding: 1% 5%;
+}
+.title{
+    border: rebeccapurple 1px solid;
+}
+.cards{
+    border: blue 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 110vh;
+    align-items:start;
+}
